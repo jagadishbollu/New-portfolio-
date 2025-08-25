@@ -387,6 +387,11 @@
       }
     }
   });
+    document.addEventListener("click", () => {
+      if (navigator.vibrate) {
+        navigator.vibrate(50); // light vibration 50ms
+      }
+    });
 </script>
 </body>
 </html>
