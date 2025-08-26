@@ -207,24 +207,25 @@ function initMobileMenu() {
     
     hamburger.addEventListener('click', function(e) {
         e.preventDefault();
-        navMenu.classList.toggle('show');
+        navMenu.classList.toggle('active');  // ✅ use 'active'
         
         const icon = hamburger.querySelector('i');
-        if (navMenu.classList.contains('show')) {
-            icon.className = 'fas fa-times';
+        if (navMenu.classList.contains('active')) {
+            icon.className = 'fas fa-times'; // close icon
         } else {
-            icon.className = 'fas fa-bars';
+            icon.className = 'fas fa-bars';  // hamburger icon
         }
     });
     
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(e) {
         if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-            navMenu.classList.remove('show');
+            navMenu.classList.remove('active');
             hamburger.querySelector('i').className = 'fas fa-bars';
         }
     });
 }
+
 
 // Resume Download
 function initResumeDownload() {
