@@ -1479,7 +1479,6 @@ section {
   .nav-menu.active {
     display: flex;
     width:50%;
-    height:100%;
     background-color: azure;
     
   }
